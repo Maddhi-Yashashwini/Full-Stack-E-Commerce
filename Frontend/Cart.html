@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="Cart.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">FashioBuy</div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Make Up</a></li>
+                        <li><a href="#">Skin Care</a></li>
+                        <li><a href="#">Home Furnishings</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li class="user-dropdown">
+                    <a id="auth-link" href="/login.html">Login/Register</a>
+                    <ul id="user-dropdown" class="dropdown-menu hidden">
+                        <!-- Profile and Logout will be inserted dynamically -->
+                    </ul>
+                </li>
+                <li><a id="cart-link" href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <h2>Shopping Cart</h2>
+
+    <p id="empty-cart-msg" style="text-align: center; font-size: 18px; color: red; display: none;">Your cart is empty.</p>
+
+    <table id="cart-table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name & Description</th>
+                <th>Price (₹)</th>
+                <th>Quantity</th>
+                <th>Total Price (₹)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <!-- ✅ Added the missing "id" to order-summary -->
+    <div id="order-summary" class="order-summary">
+        <p><strong>Total Amount: ₹<span id="total-amount">0</span></strong></p>
+        <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+    <script src="Cart.js"></script>
+    <script src="header.js"></script>
+
+</body>
+</html>

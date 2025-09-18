@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile</title>
+    <link rel="stylesheet" href="CustomerProfile.css">
+</head>
+
+<body>
+    
+    <header> 
+        <nav class="navbar">
+            <div class="logo">FashioBuy</div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Make Up</a></li>
+                        <li><a href="#">Skin Care</a></li>
+                        <li><a href="#">Home Furnishings</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li class="user-dropdown">
+                    <a id="auth-link" href="/login.html">Login/Register</a>
+                    <ul id="user-dropdown" class="dropdown-menu hidden">
+                        <!-- Profile and Logout will be inserted dynamically -->
+                    </ul>
+                </li>
+                <li><a id="cart-link" href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <div class="Main container">
+        <div class="container"> -->
+            <div class="profile-container">
+                <div class="profile-left">
+                    <img id="profile-image" src="default-profile.png" alt="Profile Picture">
+                    <h2 id="username">Username</h2>
+                    <p id="role">Role</p>
+                    <button id="upload-photo-btn" class="outline-btn">Upload Photo</button>
+                    <input type="file" id="upload-photo-input" accept="image/*" style="display: none;">
+
+                </div>
+                <div class="profile-right">
+                    <p><strong>User ID:</strong> <span id="user-id"></span></p>
+                    <p><strong>Email:</strong> <span id="email"></span></p>
+                    <p><strong>Phone:</strong> <span id="phone"></span></p>
+                    <p><strong>Address:</strong> <span id="address"></span></p>
+                    <div class="button-group">
+                        <button id="update-profile-btn" class="outline-btn">Update Profile</button>
+                        <button id="change-password-btn" class="outline-btn">Change Password</button>
+                        <button id="view-orders-btn" class="outline-btn">View Orders</button>
+                        <button id="logout-btn" class="outline-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div id="update-profile-modal" class="hidden modal">
+                <form id="update-profile-form">
+                    <h2>Update Profile</h2>
+                    <input type="email" id="new-email" placeholder="New Email" required>
+                    <input type="text" id="new-phone" placeholder="New Phone" required>
+                    <input type="text" id="new-address" placeholder="New Address" required>
+                    <button type="submit" class="outline-btn">Save</button>
+                    <button type="button" id="close-update-modal" class="outline-btn">Cancel</button>
+                </form>
+            </div>
+
+            <div id="change-password-modal" class="hidden modal">
+                <form id="change-password-form">
+                    <h2>Change Password</h2>
+                    <input type="password" id="old-password" placeholder="Old Password" required>
+                    <input type="password" id="new-password" placeholder="New Password" required>
+                    <button type="submit" class="outline-btn">Update</button>
+                    <button type="button" id="close-password-modal" class="outline-btn">Cancel</button>
+                </form>
+            </div>
+        <!-- </div>
+    </div> -->
+
+    
+    <script src="CustomerProfile.js"></script>
+    <script src="header.js"></script>
+</body>
+</html>

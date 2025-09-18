@@ -1,0 +1,264 @@
+/* General Styling
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Ensure the dropdown appears above other elements */
+/* .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    list-style: none;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    z-index: 1000; 
+} */
+
+/* Show dropdown when hovered or focused */
+/* .dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+} */
+
+/* Ensure navbar items have some spacing */
+/* .nav-links {
+    position: relative;
+    display: flex;
+    gap: 20px;
+} */
+
+/* Fix potential overlapping issues */
+/* .navbar {
+    position: relative;
+    z-index: 999;
+} */
+
+/* Subcategories Grid */
+/* #subcategories-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.subcategory-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.subcategory-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subcategory-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.subcategory-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+} */
+
+/* Footer */
+/* footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+} */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: bisque;
+    color: black;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Dropdown Styling */
+.user-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* ✅ Positions dropdown right below */
+    right: 0;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    display: none;
+    z-index: 100;
+}
+
+/* Ensure it's properly shown when toggled */
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #f1f1f1;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+
+/* General styling for the main section */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling for the section title */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Wrapper for subcategories */
+#subcategories-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px;
+    max-width: 1200px; /* Limits the width */
+    margin: 0 auto; /* Centers the grid */
+    padding: 20px; /* Adds some spacing */
+    
+}
+
+/* Styling for each subcategory card */
+.subCategory-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.subCategory-card:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for the subcategory link */
+.subCategory-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    text-align: center;
+}
+
+/* Styling for the subcategory image */
+.subCategory-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+/* Styling for the subcategory name */
+.subCategory-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="ProductDetailing.css">
+    <script defer src="ProductDetailing.js"></script>
+    <script src="header.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">FashioBuy</div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Make Up</a></li>
+                        <li><a href="#">Skin Care</a></li>
+                        <li><a href="#">Home Furnishings</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li class="user-dropdown">
+                    <a id="auth-link" href="/login.html">Login/Register</a>
+                    <ul id="user-dropdown" class="dropdown-menu hidden">
+                        <!-- Profile and Logout will be inserted dynamically -->
+                    </ul>
+                </li>
+                <li><a id="cart-link" href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    
+    
+    
+    <div class="container">
+        <div class="product-display">
+            <!-- Image Section -->
+            <div class="image-section">
+                <img id="product-image" src="./placeholder.jpg" alt="Product Image">
+                <div class="thumbnail-container" id="thumbnail-container"></div>
+            </div>
+
+            <!-- Product Details Section -->
+            <div class="details-section">
+                <h1 id="product-name">Loading...</h1>
+                <p id="product-description">Loading description...</p>
+
+                <p>Product Code: <span id="product-code">Loading...</span></p>
+                <p>Stock: <span id="product-stock">Loading...</span></p>
+
+                <p class="price-section">
+                    <del id="original-price">₹0</del> 
+                    <strong id="discounted-price">₹0</strong>
+                    <span id="discount-percentage">(0% OFF)</span>
+                </p>
+                
+
+                <p class="description">Price inclusive of all taxes</p>
+
+                <button class="wishlist-btn">❤️ Wishlist</button>
+                <button class="cart-btn" onclick="addToCart({ productId: 15 }, this)">🛒 Add to Cart</button>
+
+
+                <!-- Navigation Links -->
+                <div class="navigation-links">
+                    <a href="#">Shop more Topwear</a> |
+                </div>
+
+                <button class="view-similar">View Similar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

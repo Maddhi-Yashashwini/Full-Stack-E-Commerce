@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed Successfully</title>
+    <link rel="stylesheet" href="OrderSuccess.css"> <!-- Link to CSS -->
+</head>
+<body>
+
+    <div id="order-success">
+        <img src="https://cdn-icons-png.flaticon.com/512/148/148767.png" alt="Success">
+        <h1>Order Placed Successfully!</h1>
+        <p id="order-time"></p>
+        <button id="continue-shopping">Continue Shopping</button>
+    </div>
+
+    <script>
+        // Display current date and time
+        document.getElementById("order-time").innerText = "Order placed on: " + new Date().toLocaleString();
+
+        // Redirect to homepage on button click
+        document.getElementById("continue-shopping").addEventListener("click", function() {
+            window.location.href = "HomepageIndex.html"; // Change to your homepage URL
+        });
+    </script>
+</body>
+</html>

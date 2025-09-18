@@ -1,0 +1,281 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: bisque;
+    color: black;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Dropdown Styling */
+.user-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* ✅ Positions dropdown right below */
+    right: 0;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    display: none;
+    z-index: 100;
+}
+
+/* Ensure it's properly shown when toggled */
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #f1f1f1;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+
+/* Product Display */
+.product-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    min-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+#product-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Thumbnail Container */
+.thumbnail-container {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.thumbnail-container img:hover,
+.thumbnail-container img.active {
+    transform: scale(1.1);
+    border: 2px solid #ff6600;
+}
+
+/* Details Section */
+.details-section {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#product-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+}
+
+#product-description, .description {
+    margin: 15px 0;
+    color: #555;
+    font-weight: 600;
+}
+
+.price-section {
+    margin: 20px 0;
+}
+
+#discounted-price {
+    font-size: 26px;
+    color: #e53935;
+    font-weight: bold;
+}
+
+#original-price {
+    font-size: 18px;
+    color: #888;
+    text-decoration: line-through;
+    margin-left: 12px;
+}
+
+#discount-percentage {
+    font-size: 18px;
+    color: #388e3c;
+    margin-left: 12px;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e55b00;
+}
+
+.wishlist-btn {
+    background-color: #ff3366;
+}
+
+.wishlist-btn:hover {
+    background-color: #e62e5c;
+}
+
+/* Navigation Links */
+.navigation-links {
+    margin-top: 15px;
+}
+
+.navigation-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.navigation-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-display {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-section, .details-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .thumbnail-container {
+        justify-content: center;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .product-name {
+        font-size: 22px;
+    }
+
+    .discounted-price {
+        font-size: 22px;
+    }
+
+    .original-price, .discount-percentage {
+        font-size: 16px;
+    }
+
+    .thumbnail-container img {
+        width: 50px;
+        height: 50px;
+    }
+}
