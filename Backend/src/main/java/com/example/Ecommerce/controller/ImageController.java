@@ -16,10 +16,10 @@ import java.nio.file.Paths;
 public class ImageController {
 
     // Define base directory (inside the target folder)
-    private final Path CATEGORY_IMAGE_DIRECTORY = Paths.get("C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/src/main/resources/EcomImages/EcomCategoriesImages/");
-    private final Path SUBCATEGORY_IMAGE_DIRECTORY = Paths.get("C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/src/main/resources/EcomImages/EcomSubCategoriesImages/");
-    private final Path PRODUCT_IMAGE_DIRECTORY = Paths.get("C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/src/main/resources/EcomImages/EcomProductsImages/");
-    private final Path USER_IMAGE_DIRECTORY = Paths.get("C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/src/main/resources/EcomImages/");
+    private final Path CATEGORY_IMAGE_DIRECTORY = Paths.get("C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/Backend/src/main/resources/EcomImages/EcomCategoriesImages/");
+    private final Path SUBCATEGORY_IMAGE_DIRECTORY = Paths.get("C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/Backend/src/main/resources/EcomImages/EcomSubCategoriesImages/");
+    private final Path PRODUCT_IMAGE_DIRECTORY = Paths.get("C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/Backend/src/main/resources/EcomImages/EcomProductsImages/");
+    private final Path USER_IMAGE_DIRECTORY = Paths.get("C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/Backend/src/main/resources/EcomImages/");
 
     @GetMapping("/categories/{imageName}")
     public ResponseEntity<Resource> getCategoryImage(@PathVariable String imageName) {

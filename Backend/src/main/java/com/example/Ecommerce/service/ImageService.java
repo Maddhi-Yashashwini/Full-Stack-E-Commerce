@@ -13,8 +13,8 @@ import java.util.List;
 public class ImageService {
 
 
-    private final String PRODUCT_IMAGE_UPLOAD_PATH = "C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/src/main/resources/EcomImages/EcomProductsImages/";
-    private final String USER_IMAGE_UPLOAD_PATH = "C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/src/main/resources/EcomImages/";
+    private final String PRODUCT_IMAGE_UPLOAD_PATH = "C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/Backend/src/main/resources/EcomImages/EcomProductsImages/";
+    private final String USER_IMAGE_UPLOAD_PATH = "C:/Users/Maddhi.Yashashwini/springBoot projects/Ecommerce/Backend/src/main/resources/EcomImages/";
 
 
     public List<String> uploadImages(MultipartFile[] files) throws IOException {
