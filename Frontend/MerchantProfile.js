@@ -3,7 +3,7 @@ const token = localStorage.getItem("token");
 
 if (!token) {
     alert("Authentication error! Please log in again.");
-    window.location.href = "login.html";
+    window.location.href = "/Frontend/login.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("add-products-btn").addEventListener("click", function () {
-        window.location.href = "AddProducts.html";
+        window.location.href = "/Frontend/AddProducts.html";
     });
 
     document.getElementById("upload-photo-input").addEventListener("change", (event) => uploadPhoto(event, token));
@@ -133,11 +133,11 @@ function uploadPhoto(event, token) {
 }
 
 function viewMerchantOrders() {
-    window.location.href = "MerchantOrders.html";
+    window.location.href = "/Frontend/MerchantOrders.html";
 }
 
 function viewCustomers(){
-    window.location.href = "MerchantCustomers.html";
+    window.location.href = "/Frontend/MerchantCustomers.html";
 }
 
 

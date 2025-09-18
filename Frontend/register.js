@@ -50,6 +50,7 @@ document
       }
       if (response.status === 409) {
         alert(data.message || "User already exists.");
+        window.location.href = "login.html";
         return;
       }
       alert(

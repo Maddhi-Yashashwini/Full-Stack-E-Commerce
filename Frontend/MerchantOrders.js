@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!token) {
         alert("Please log in to view your orders.");
-        window.location.href = "/login.html";
+        window.location.href = "/Frontend/login.html";
         return;
     }
 

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!token) {
         alert("Please log in to view your cart.");
-        window.location.href = "/login.html";
+        window.location.href = "/Frontend/login.html";
         return;
     }
 
@@ -131,7 +131,7 @@ document.getElementById("checkout-btn").addEventListener("click", async function
         if (!response.ok) throw new Error("Checkout failed");
 
         alert("Order placed successfully!");
-        window.location.href = "OrderSuccess.html";
+        window.location.href = "/Frontend/OrderSuccess.html";
 
     } catch (error) {
         console.error("Error during checkout:", error);

@@ -3,7 +3,7 @@ const token = localStorage.getItem("token");
 
 if (!token) {
     alert("Authentication error! Please log in again.");
-    window.location.href = "login.html";
+    window.location.href = "/Frontend/login.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -128,7 +128,7 @@ function uploadPhoto(event, token) {
 }
 
 function viewOrders() {
-    window.location.href = "orders.html";
+    window.location.href = "/Frontend/orders.html";
 }
 
 function logout() {
@@ -137,6 +137,6 @@ function logout() {
         localStorage.removeItem("token");
         localStorage.removeItem("role");
         alert("Logged out successfully!");
-        window.location.href= "HomepageIndex.html";
+        window.location.href= "/Frontend/HomepageIndex.html";
     }
 }

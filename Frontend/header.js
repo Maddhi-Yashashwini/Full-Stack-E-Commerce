@@ -54,17 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        cartLink.href = "/cart.html"; // Allow cart access
+        cartLink.href = "/Frontend/cart.html"; // Allow cart access
 
     } else {
         // ❌ User is NOT logged in: Show "Login/Register"
         authLink.textContent = "Login/Register";
-        authLink.href = "/login.html";
+        authLink.href = "/Frontend/login.html";
 
         cartLink.href = "#";
         cartLink.addEventListener("click", function () {
             alert("Please log in to access your cart.");
-            window.location.href = "/login.html";
+            window.location.href = "/Frontend/login.html";
         });
     }
 });
