@@ -125,7 +125,6 @@ public class MerchantController {
 
         String token1 = token.substring(7);
         String username = jwtService.extractUsername(token1);
-        int userId = jwtService.extractUserId(token1);
 
         User user = userRepo.findByUsername(username);
         if (user == null) {
@@ -176,7 +175,6 @@ public class MerchantController {
 
         String token1 = token.substring(7);
         String username = jwtService.extractUsername(token1);
-        int userId = jwtService.extractUserId(token1);
 
         User user = userRepo.findByUsername(username);
         if (user == null) {
@@ -227,7 +225,6 @@ public class MerchantController {
 
         String token1 = token.substring(7);
         String username = jwtService.extractUsername(token1);
-        int userId = jwtService.extractUserId(token1);
 
         User user = userRepo.findByUsername(username);
         if (user == null) {

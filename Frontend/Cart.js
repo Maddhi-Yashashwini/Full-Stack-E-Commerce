@@ -41,7 +41,6 @@ async function fetchCart() {
         if (!response.ok) throw new Error("Failed to fetch cart");
 
         let cartData = await response.json();
-        console.log("Cart Data:", cartData);
 
         let cartItemsContainer = document.getElementById("cart-items");
         let cartTable = document.getElementById("cart-table");

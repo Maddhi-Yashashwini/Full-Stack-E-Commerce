@@ -55,23 +55,16 @@ document.addEventListener("DOMContentLoaded", function() {
 function fetchCategories() {
     fetch("http://localhost:8080/api/categories")
         .then(response => response.json())
-        .then(categories => {
-            console.log(categories); 
+        .then(categories => { 
             const categoriesWrapper = document.getElementById("categories-wrapper");
             categories.forEach((category, index) => {
                 setTimeout(() => {
-                    console.log('Creating card for:', category.name);
-            
                     const categoryCard = document.createElement("div");
                     categoryCard.classList.add("category-card");
                     
                     const categoryLink = document.createElement("a");
                     categoryLink.href = `SubCategoriesIndex.html?category=${encodeURIComponent(category.categoryId)}`; // Pass category as query param
                     categoryLink.classList.add("category-link");
-                    categoryLink.addEventListener("click", function(event) {
-                        console.log("Clicked:", category.name);
-                    });
-                    
 
                     const categoryImage = document.createElement("img");
                     categoryImage.src = `${category.image}`;

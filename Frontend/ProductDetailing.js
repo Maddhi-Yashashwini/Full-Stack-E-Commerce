@@ -37,7 +37,6 @@ async function fetchProductDetails(categoryId, subCategoryId, productId) {
         if (!response.ok) throw new Error("Failed to fetch product details");
 
         let product = await response.json();
-        console.log(product);
 
         document.getElementById("product-name").textContent = product.name;
         document.getElementById("product-description").textContent = product.description;
@@ -99,7 +98,6 @@ async function addToCart(product, button) {
 
         button.textContent = "✅ Added to Cart";
         button.disabled = true;
-        console.log("Product added to cart successfully!");
 
     } catch (error) {
         console.error("Error:", error);
@@ -119,7 +117,6 @@ async function updateCartButtonState(productId) {
         if (!response.ok) throw new Error("Failed to fetch cart items");
 
         let cartData = await response.json();
-        console.log("Cart Data:", cartData);
 
         let cartProductIds = Array.isArray(cartData.cartItems) ? cartData.cartItems.map(item => item.product.productId) : [];
 

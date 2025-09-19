@@ -50,24 +50,17 @@ function fetchSubCategories(categoryId) {
     fetch(`http://localhost:8080/api/subcategories/${categoryId}`)
         .then(response => response.json())
         .then(subCategories => {
-            console.log(subCategories); 
             const subCategoriesWrapper = document.getElementById("subcategories-wrapper");
             subCategories.forEach((subCategory, index) => {
                 setTimeout(() => {
-                    console.log('Creating card for:', subCategory.subCategoryName);
             
                     const subCategoryCard = document.createElement("div");
                     subCategoryCard.classList.add("subCategory-card");
                     
                     const subCategoryLink = document.createElement("a");
                     subCategoryLink.href = `ProductsIndex.html?category=${encodeURIComponent(categoryId)}&subCategory=${encodeURIComponent(subCategory.subCategoryId)}`;
-
                     subCategoryLink.classList.add("subCategory-link");
-                    subCategoryLink.addEventListener("click", function(event) {
-                        console.log("Clicked:", subCategory.subCategoryname);
-                    });
-                    
-
+            
                     const subCategoryImage = document.createElement("img");
                     subCategoryImage.src = `${subCategory.subImage}`;
                     subCategoryImage.alt = subCategory.subCategoryName;

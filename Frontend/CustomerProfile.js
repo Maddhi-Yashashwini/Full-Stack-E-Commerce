@@ -26,22 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchProfile(token);
 
     document.getElementById("update-profile-btn").addEventListener("click", () => {
-        console.log("Update profile button clicked");
         document.getElementById("update-profile-modal").classList.remove("hidden");
     });
 
     document.getElementById("close-update-modal").addEventListener("click", () => {
-        console.log("closing Update profile");
         document.getElementById("update-profile-modal").classList.add("hidden");
     });
 
     document.getElementById("change-password-btn").addEventListener("click", () => {
-        console.log("change password button clicked");
         document.getElementById("change-password-modal").classList.remove("hidden");
     });
 
     document.getElementById("close-password-modal").addEventListener("click", () => {
-        console.log("closing change password");
         document.getElementById("change-password-modal").classList.add("hidden");
     });
 

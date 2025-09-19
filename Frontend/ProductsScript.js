@@ -32,7 +32,6 @@ function fetchProducts(categoryId, subCategoryId) {
     fetch(`http://localhost:8080/api/products/${categoryId}/${subCategoryId}`)
         .then(response => response.json())
         .then(products => {
-            console.log(products);
             const productGrid = document.getElementById("productGrid"); // Fix: Match HTML ID
 
             if (!productGrid) {

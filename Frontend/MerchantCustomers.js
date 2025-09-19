@@ -53,7 +53,6 @@ function displayCustomers(customers) {
 
     customers.forEach(async (customer) => {
         let totalOrders = await fetchTotalOrders(customer.userId);
-        console.log(totalOrders);
         let imageUrl = `http://localhost:8080/api/images/users/${customer.userImage}`;
         
         let row = `
@@ -73,7 +72,6 @@ function displayCustomers(customers) {
 }
 
 async function fetchTotalOrders(userId) {
-    console.log("Fetching total orders for user:", userId);
     try {
         let response = await fetch(`http://localhost:8080/api/merchant/customer/${userId}/order-count`, {  
             method: "GET",
@@ -82,12 +80,9 @@ async function fetchTotalOrders(userId) {
             }
         });
 
-        console.log("HTTP Response Status:", response.status);
-
         if (!response.ok) throw new Error("Failed to fetch total orders");
         
         let data = await response.json();
-        console.log("API Response Data:", data);  // 🔍 Debug response
 
         return data || 0;
     } catch (error) {

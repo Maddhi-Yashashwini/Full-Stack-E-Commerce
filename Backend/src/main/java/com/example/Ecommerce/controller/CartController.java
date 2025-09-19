@@ -33,7 +33,6 @@ public ResponseEntity<String> addToCart(@PathVariable int productId,
 
     String token = authHeader.substring(7);
     String username = jwtService.extractUsername(token);
-    int userId = jwtService.extractUserId(token);
 
     User user = userRepo.findByUsername(username);
     if (user == null) {
